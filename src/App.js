@@ -1,22 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [ip, setIp] = useState('');
+  
+  function callback(data){
+    setIp(data);
+  }
+
+  useEffect(
+    () => {
+      customAxios('/ip', callback);
+    }, []
+  );
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        이 기기의 IP주소는 {ip}입니다.
       </header>
     </div>
   );
