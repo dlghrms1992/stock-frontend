@@ -5,7 +5,7 @@ export default function customAxios(url, callback) {
         {
             url: '/api'+url,
             method: 'post',
-        }
+        
 
         /**
          * 개발 환경에서의 크로스 도메인 이슈를 해결하기 위한 코드로
@@ -15,6 +15,7 @@ export default function customAxios(url, callback) {
          */
         baseURL: 'http://localhost:20000',
         withCredentials: true,
+        }
     ).then(function (response){
         callback(response.data);
     });
