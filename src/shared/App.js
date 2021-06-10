@@ -1,7 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
 import { useState,useEffect } from 'react';
-import customAxios from './customAxios';
+import customAxios from './shared/customAxios';
 import { BrowserRouter as Rotuer, Route } from 'react-router-dom';
 
 import Main from "../pages/Main";

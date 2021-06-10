@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Component from "../components/CommonMenu";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import CommonMenu from "./components/menu/CommonMenu";
 
 class Main extends Component{
     render(){
